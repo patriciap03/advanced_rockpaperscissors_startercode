@@ -1,1 +1,22 @@
+#body {
+    background-color:#FFE4E1;
+    color:#696969;
+}
+
+.container {
+    font-family: Comic Sans;
+}
+
+#img {
+    text-align: center;
+}
+
+#intructions {
+    text-align: center;
+}
+
+#shoot {
+    background-color: #e7e7e7;
+    border-radius: 12px;
+}
 

@@ -1,17 +1,4 @@
-//Class 1:
-        // Fork and clone the repo and set up your project workspace and link files
-        // Write HTML for your project
-//Class 2:  
-        // Declare four global variables for intial state of the list of choices, the computer choice, the user choice, and the winner.  
-        // Practice using console.log() and debugger to debug your code
-        // Create your document ready function. 
-        // Create a click hander for when the "Shoot!" button is clicked, takes in the user choice from the input field, 
-        // Display the user choice to the output screen
-//Class 3:  
-        // Randomly choose among 'rock', 'paper', or 'scissors' from the list of choices 
-        // Display the computer choice to the output screen
-        // Compare the user choice and the computer choice to determine who won. 
-        // Display the user winner to the output screen 
+     // Display the user winner to the output screen 
         // Clear the input box for the next choice
 
 // *************************** YOUR CODE BELOW *******************************
@@ -19,12 +6,58 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
+var choices = [
+        "Rock",
+        "Paper",
+        "Scissors"
+        ];
+        
 
+        
 
-
+        
 //FUNCTIONS
 
 
 
 // DOCUMENT READY FUNCTION
-
+$(document).ready(function () {
+        
+//make this into a function 
+   
+   $("#shoot").click(function(){  
+        $("#uc").empty();
+        $("#cc").empty();
+        $("#winner").empty();
+//add your inout value into the user choice    
+        
+        var userchoice = $("#value").val();
+        var computerchoice = choices[
+        Math.floor( Math.random( ) * choices.length)
+        ];
+        $("#uc").append (userchoice);
+        $("#cc").append(computerchoice);
+        
+//use an if statement to see who won the game        
+        
+         if ( (userchoice===("rock" || "Rock"))&&(computerchoice==="Paper") ) {
+                 $("#winner").append("Computer Won!!");
+         } else if ( (userchoice===("rock" || "Rock"))&&(computerchoice==="Scissors") ) {
+                 $("#winner").append("User Won!!");
+         }else if ( (userchoice===("paper" || "Paper"))&&(computerchoice==="Scissors") ) {
+                 $("#winner").append("Computer Won!!");
+         }else if ( (userchoice===("paper" || "Paper"))&&(computerchoice==="Rock") ) {
+                 $("#winner").append("User Won!!");
+         }else if ( (userchoice===("scissors" || "Scissors"))&&(computerchoice==="Rock") ) {
+                 $("#winner").append("Computer Won!!");
+         }else if ( (userchoice===("scissors" || "Scissors"))&&(computerchoice==="Paper") ) {
+                 $("#winner").append("User Won!!");
+         }else if ( userchoice===computerchoice) {
+                 $("#winner").append("Tied");
+         }else {
+                 $("#winner").append("Invalid Entry");
+         }
+         
+         
+});
+});
