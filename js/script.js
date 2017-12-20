@@ -40,17 +40,17 @@ $(document).ready(function () {
         
 //use an if statement to see who won the game        
         
-         if ( (userchoice===("rock" || "Rock"))&&(computerchoice==="Paper") ) {
+         if ( (userchoice==="Rock")&&(computerchoice==="Paper") ) {
                  $("#winner").append("Computer Won!!");
-         } else if ( (userchoice===("rock" || "Rock"))&&(computerchoice==="Scissors") ) {
+         } else if ( (userchoice==="Rock")&&(computerchoice==="Scissors") ) {
                  $("#winner").append("User Won!!");
-         }else if ( (userchoice===("paper" || "Paper"))&&(computerchoice==="Scissors") ) {
+         }else if ( (userchoice==="Paper")&&(computerchoice==="Scissors") ) {
                  $("#winner").append("Computer Won!!");
-         }else if ( (userchoice===("paper" || "Paper"))&&(computerchoice==="Rock") ) {
+         }else if ( (userchoice==="Paper")&&(computerchoice==="Rock") ) {
                  $("#winner").append("User Won!!");
-         }else if ( (userchoice===("scissors" || "Scissors"))&&(computerchoice==="Rock") ) {
+         }else if ( (userchoice==="Scissors")&&(computerchoice==="Rock") ) {
                  $("#winner").append("Computer Won!!");
-         }else if ( (userchoice===("scissors" || "Scissors"))&&(computerchoice==="Paper") ) {
+         }else if ( (userchoice==="Scissors")&&(computerchoice==="Paper") ) {
                  $("#winner").append("User Won!!");
          }else if ( userchoice===computerchoice) {
                  $("#winner").append("Tied");
